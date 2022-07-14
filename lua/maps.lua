@@ -34,12 +34,15 @@ end
 --mappings
 --no hls
   nmap("<leader>H", "<cmd>nohls<cr>")
---Telescole
+--Telescope
   nmap ("<leader>ff"," <cmd>Telescope find_files<cr>")
   nmap ("<leader>fg", "<cmd>Telescope live_grep<cr>")
   nmap ("<leader>fb", "<cmd>Telescope buffers<cr>")
   nmap ("<leader>fh", "<cmd>Telescope help_tags<cr>")
---sourcing coc mappings that require vimscript
+  nmap("<leader>fwg", "<cmd>lua require('telescope').grep_wiki()<cr>")
+  nmap("<leader>nn", "<cmd>lua require('telescope').edit_neovim()<cr>")
+
+  --sourcing coc mappings that require vimscript
   vim.cmd "source   $HOME/.config/nvim/vimscript/coc.vim"
 --venn 
   nmap('<leader>L', ":lua Toggle_venn()<CR>")
@@ -48,4 +51,4 @@ end
 require('commands')  
   nmap('<leader>T', "<cmd>FTermToggle<CR>")
 --Glow
-  nmap('<leader>G', "<cmd>Glow")
+  nmap('<leader>G', "<cmd>Glow<cr>")

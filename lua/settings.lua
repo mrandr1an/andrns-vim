@@ -33,6 +33,9 @@ require "paq" {
 'junegunn/goyo.vim';
 {"ellisonleao/glow.nvim", branch = 'main'};
 'ixru/nvim-markdown';
+'BurntSushi/ripgrep';
+'lervag/vimtex';
+'neovimhaskell/haskell-vim';
 }
 
 --Colorscheme
@@ -46,4 +49,4 @@ require("nvim-treesitter.configs").setup {
 	highlight={enable = true};
 }
 
-
+vim.cmd(":hi Visual term=reverse cterm=reverse guibg=Grey")
